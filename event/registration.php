@@ -1,6 +1,6 @@
 <?php include '../include/header2.php' ?>
 <legend>Event Registration</legend>
-<form action="/registration_handler.php" method="post">
+<form action="registration_handler.php" method="post">
     <div class="row">
         <div class="col-md-2">Title</div>
         <div class="col-md-6"><input type="text" class="form-control" name="title"></div>
