@@ -5,6 +5,7 @@ if (! isset($_SESSION['user_id'])) {
     echo 'No permission';
     exit;
 }
+var_dump($_SESSION);
 ?>
 
 <!DOCTYPE html>
@@ -23,6 +24,7 @@ if (! isset($_SESSION['user_id'])) {
         <div id='my-header'></div>
         <div id='my-menu'>
             <a href='../event/index.php'>Dashboard</a> | 
+            <a href='../event/registration.php'>Event Registration</a> | 
             <a href='../home/logout.php'>Logout</a>
         </div>
         <div id='my-content'>
