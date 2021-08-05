@@ -1,0 +1,26 @@
+#my-wrapper {
+    border: 2px solid red;
+    padding: 10px;
+}
+
+#my-header {
+    border: 1px solid blue;
+    background-color: burlywood;
+    height:100px;
+}
+
+#my-menu {
+    background-color:yellow;
+    height:24px;
+}
+
+#my-content {
+    background-color:#fff;
+    min-height: 400px;
+    padding:10px;
+}
+
+#my-footer {
+    background-color: #336699;
+    height: 100px;
+}
