@@ -12,7 +12,10 @@
 <body>
     <div id='my-wrapper'>
         <div id='my-header'></div>
-        <div id='my-menu'></div>
+        <div id='my-menu'>
+            <a href='../home/main.php'>Home</a> | 
+            <a href='../home/login.php'>Login</a>
+        </div>
         <div id='my-content'>
 
     
