@@ -1,5 +1,6 @@
 <?php
 include '../include/init.php';
+verifyCsrf();
 $title = $db->e($_POST['title']);
 $descr = $db->e($_POST['descr']);
 $event_dt = $db->e($_POST['event_dt']);
