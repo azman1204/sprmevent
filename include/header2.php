@@ -1,13 +1,6 @@
 <?php
-session_start();
-// user authorization
-if (! isset($_SESSION['user_id'])) {
-    echo 'No permission';
-    exit;
-}
-// var_dump($_SESSION);
+include '../include/init.php'
 ?>
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -25,6 +18,7 @@ if (! isset($_SESSION['user_id'])) {
         <div id='my-menu'>
             <a href='../event/index.php'>Dashboard</a> | 
             <a href='../event/registration.php'>Event Registration</a> | 
+            <a href='../event/list.php'>Event List</a> | 
             <a href='../home/logout.php'>Logout</a>
         </div>
         <div id='my-content'>
