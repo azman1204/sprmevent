@@ -12,12 +12,19 @@ if (! isset($event)) {
 ?>
 <legend>Event Registration</legend>
 <?= isset($err) ? showErr($err) : '' ?>
-<form action="registration_handler.php" method="post">
+
+<script>
+$(function() {
+    $("#event-form").validate();
+});
+</script>
+
+<form action="registration_handler.php" method="post" id="event-form">
     <input type="hidden" name="csrf" value="<?= csrf() ?>">
     <input type="hidden" name="id" value="<?= $event['id'] ?>">
     <div class="row">
         <div class="col-md-2">Title</div>
-        <div class="col-md-6"><input value="<?= $event['title'] ?>" type="text" class="form-control" name="title"></div>
+        <div class="col-md-6"><input required value="<?= $event['title'] ?>" type="text" class="form-control" name="title"></div>
     </div>
     <div class="row">
         <div class="col-md-2">Description</div>

@@ -28,3 +28,7 @@
 .row {
     margin-top: 4px;
 }
+
+.error {
+    color: red;
+}

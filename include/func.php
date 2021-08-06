@@ -10,7 +10,7 @@ function csrf() {
 
 function verifyCsrf() {
     // check CSRF form
-    if (! isset($_SESSION['csrf'])) {
+    if (! isset($_POST['csrf'])) {
         echo 'No Permission.. missing csrf';
         exit;
     }
