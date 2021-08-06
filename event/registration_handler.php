@@ -7,6 +7,31 @@ $event_dt = $db->e($_POST['event_dt']);
 $status = $db->e($_POST['status']);
 $id = $db->e($_POST['id']);
 
+// data validation
+$pass = true;
+$err = [];
+
+if (empty($title)) {
+    $pass = false;
+    $err[] = 'Title cannot empty';
+}
+
+if (empty($descr)) {
+    $pass = false;
+    $err[] = 'Description cannot empty';
+}
+
+if (empty($event_dt)) {
+    $pass = false;
+    $err[] = 'Event date cannot empty';
+}
+
+if (! $pass) {
+    $event = $_POST;
+    include 'registration.php';
+    return;
+}
+
 if(empty($id)) {
     // insert
     $sql = "INSERT INTO event (title, descr, event_dt, status) 

@@ -10,13 +10,22 @@ function csrf() {
 
 function verifyCsrf() {
     // check CSRF form
-    if (isset($_SESSION['csrf'])) {
-        echo 'No Permission';
+    if (! isset($_SESSION['csrf'])) {
+        echo 'No Permission.. missing csrf';
         exit;
     }
 
     if ($_SESSION['csrf'] !== $_POST['csrf']) {
-        echo 'No Permission';
+        echo 'No Permission.. invalid csrf';
         exit;
     }
+}
+
+function showErr($err) {
+    $str = "<ul class='alert alert-danger'>";
+    foreach ($err as $msg) {
+        $str .= "<li>$msg</li>";
+    }
+    $str .= "</ul>";
+    return $str;
 }

@@ -34,6 +34,7 @@ class Database {
     }
 
     function insert($sql) {
+        echo $sql;
         if (! mysqli_query($this->conn, $sql)) {
             echo "Error" . mysqli_error($conn); 
             exit;

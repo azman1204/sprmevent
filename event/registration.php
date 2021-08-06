@@ -11,6 +11,7 @@ if (! isset($event)) {
 }
 ?>
 <legend>Event Registration</legend>
+<?= isset($err) ? showErr($err) : '' ?>
 <form action="registration_handler.php" method="post">
     <input type="hidden" name="csrf" value="<?= csrf() ?>">
     <input type="hidden" name="id" value="<?= $event['id'] ?>">

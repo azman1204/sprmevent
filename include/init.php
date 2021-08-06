@@ -6,6 +6,6 @@ if (! isset($_SESSION['user_id'])) {
     exit;
 }
 
-include '../include/func.php';
-include '../component/Database.php';
+include_once '../include/func.php';
+include_once '../component/Database.php';
 $db = new Database();
