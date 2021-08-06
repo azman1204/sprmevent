@@ -29,12 +29,12 @@ $(function() {
     <div class="row">
         <div class="col-md-2">Description</div>
         <div class="col-md-6">
-            <textarea class="form-control" name="descr"><?= $event['descr'] ?></textarea>
+            <textarea required class="form-control" name="descr"><?= $event['descr'] ?></textarea>
         </div>
     </div>
     <div class="row">
         <div class="col-md-2">Date</div>
-        <div class="col-md-6"><input value="<?= $event['event_dt'] ?>" type="date" class="form-control" name="event_dt"></div>
+        <div class="col-md-6"><input required value="<?= $event['event_dt'] ?>" type="date" class="form-control" name="event_dt"></div>
     </div>
     <div class="row">
         <div class="col-md-2">Status</div>
