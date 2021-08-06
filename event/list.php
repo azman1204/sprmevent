@@ -18,7 +18,7 @@
         <td><?= $row['title'] ?></td>
         <td><?= date('d/m/Y', strtotime($row['event_dt'])) ?></td>
         <td>
-            <a href=''>edit</a> |
+            <a href='edit.php?id=<?= $row['id'] ?>'>edit</a> |
             <a href=''>delete</a>
         </td>
     </tr>

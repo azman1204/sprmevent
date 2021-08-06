@@ -17,6 +17,13 @@ class Database {
         $this->conn = $conn;
     }
 
+    // return a record
+    function findOne($sql) {
+        $rs = mysqli_query($this->conn, $sql);
+        $row = mysqli_fetch_array($rs);
+        return $row;
+    }
+
     function findAll($sql) {
         $rs = mysqli_query($this->conn, $sql);
         $arr = [];
