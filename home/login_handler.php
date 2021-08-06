@@ -12,7 +12,8 @@ if ($row = mysqli_fetch_array($rs)) {
     if (password_verify($password, $row['password'])) {
         // password match
         echo "user exist";
-        $_SESSION['user_id'] =$user_id; // set session $_GET $_POST $_SESSION -> assoc. array
+        $_SESSION['user_id'] = $user_id; // set session $_GET $_POST $_SESSION -> assoc. array
+        $_SESSION['role'] = $row['role'];
         header('location:../event/index.php');
     } else {
         echo "password does not match";

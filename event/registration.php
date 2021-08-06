@@ -15,11 +15,11 @@ if (! isset($event)) {
 
 <script>
 $(function() {
-    $("#event-form").validate();
+    $("#my-form").validate();
 });
 </script>
 
-<form action="registration_handler.php" method="post" id="event-form">
+<form action="registration_handler.php" method="post" id="my-form">
     <input type="hidden" name="csrf" value="<?= csrf() ?>">
     <input type="hidden" name="id" value="<?= $event['id'] ?>">
     <div class="row">

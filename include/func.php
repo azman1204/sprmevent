@@ -1,5 +1,13 @@
 <?php
 // collection of frequently use function
+function isAdmin() {
+    if ($_SESSION['role'] == 'admin') {
+        return true;
+    } else {
+        return false;
+    }
+}
+
 
 // generate a long hash token
 function csrf() {

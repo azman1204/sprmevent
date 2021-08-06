@@ -19,7 +19,11 @@ include_once '../include/init.php'
         <div id='my-header'></div>
         <div id='my-menu'>
             <a href='../event/index.php'>Dashboard</a> | 
-            <a href='../event/registration.php'>Event Registration</a> | 
+
+            <?php if(isAdmin()) : ?>
+                <a href='../event/registration.php'>Event Registration</a> | 
+            <?php endif; ?>
+
             <a href='../event/list.php'>Event List</a> | 
             <a href='../home/logout.php'>Logout</a>
         </div>
