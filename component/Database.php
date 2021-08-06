@@ -34,11 +34,19 @@ class Database {
     }
 
     function insert($sql) {
-
+        if (! mysqli_query($this->conn, $sql)) {
+            echo "Error" . mysqli_error($conn); 
+            exit;
+        }
+        return true;
     }
 
     function update($sql) {
-
+        if (! mysqli_query($this->conn, $sql)) {
+            echo "Error" . mysqli_error($conn); 
+            exit;
+        }
+        return true;
     }
 
     function delete($sql) {

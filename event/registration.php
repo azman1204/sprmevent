@@ -1,6 +1,7 @@
 <?php include_once '../include/header2.php' ?>
 <legend>Event Registration</legend>
 <form action="registration_handler.php" method="post">
+    <input type="hidden" name="id" value="<?= $event['id'] ?>">
     <div class="row">
         <div class="col-md-2">Title</div>
         <div class="col-md-6"><input value="<?= $event['title'] ?>" type="text" class="form-control" name="title"></div>
