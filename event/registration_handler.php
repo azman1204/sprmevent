@@ -19,11 +19,3 @@ if(empty($id)) {
 }
 header('location:list.php');
 
-// include '../include/conn.php';
-
-
-// if (! mysqli_query($conn, $sql)) {
-//     echo "Error" . mysqli_error($conn); 
-//     exit;
-// }
-

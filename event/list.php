@@ -19,7 +19,8 @@
         <td><?= date('d/m/Y', strtotime($row['event_dt'])) ?></td>
         <td>
             <a href='edit.php?id=<?= $row['id'] ?>'>edit</a> |
-            <a href=''>delete</a>
+            <a href='delete.php?id=<?= $row['id']?>' 
+            onclick="return confirm('Anda pasti ?')">delete</a>
         </td>
     </tr>
     <?php endforeach; ?>

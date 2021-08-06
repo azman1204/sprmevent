@@ -50,7 +50,11 @@ class Database {
     }
 
     function delete($sql) {
-
+        if (! mysqli_query($this->conn, $sql)) {
+            echo "Error" . mysqli_error($conn); 
+            exit;
+        }
+        return true;
     }
 }
 ?>
