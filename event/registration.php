@@ -1,4 +1,15 @@
-<?php include_once '../include/header2.php' ?>
+<?php 
+include_once '../include/header2.php';
+// on click create event
+if (! isset($event)) {
+    $event = [
+        'id'     => '',
+        'title'  => '',
+        'descr'  => '',
+        'status' => 'O'
+    ];
+}
+?>
 <legend>Event Registration</legend>
 <form action="registration_handler.php" method="post">
     <input type="hidden" name="id" value="<?= $event['id'] ?>">
