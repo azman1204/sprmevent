@@ -1,10 +1,10 @@
 <?php
 include '../include/init.php';
-$title = $_POST['title'];
-$descr = $_POST['descr'];
-$event_dt = $_POST['event_dt'];
-$status = $_POST['status'];
-$id = $_POST['id'];
+$title = $db->e($_POST['title']);
+$descr = $db->e($_POST['descr']);
+$event_dt = $db->e($_POST['event_dt']);
+$status = $db->e($_POST['status']);
+$id = $db->e($_POST['id']);
 
 if(empty($id)) {
     // insert

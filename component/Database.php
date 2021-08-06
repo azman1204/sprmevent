@@ -56,5 +56,10 @@ class Database {
         }
         return true;
     }
+
+    // prevent SQL injection
+    function e($data) {
+        return mysqli_real_escape_string($this->conn, $data);
+    }
 }
 ?>
